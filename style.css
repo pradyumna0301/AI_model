@@ -1,190 +1,50 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
 body {
-  height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+header {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #1e293b;
 }
 
-.login-container {
-  background: #fff;
-  width: 350px;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  text-align: center;
-}
-
-.login-container h2 {
-  margin-bottom: 5px;
-  color: #333;
-}
-
-.login-container p {
-  margin-bottom: 25px;
-  color: #777;
-  font-size: 14px;
-}
-
-.input-group {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 12px 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  font-size: 14px;
-}
-
-.input-group label {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  color: #999;
-  font-size: 14px;
-  pointer-events: none;
-  transform: translateY(-50%);
-  transition: 0.3s;
-  background: #fff;
-  padding: 0 5px;
-}
-
-.input-group input:focus + label,
-.input-group input:valid + label {
-  top: -8px;
-  font-size: 12px;
-  color: #667eea;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background: #667eea;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #5a67d8;
-}
-
-.extra {
-  margin-top: 15px;
-  font-size: 13px;
-}
-
-.extra a {
-  color: #667eea;
+nav a {
+  color: white;
+  margin: 10px;
   text-decoration: none;
 }
 
-.extra a:hover {
-  text-decoration: underline;
-}
-:root {
-    --neon-blue: #00f3ff;
-    --deep-space: #0a0b10;
-    --glass: rgba(255, 255, 255, 0.05);
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
 }
 
-.futuristic-footer {
-    background: var(--deep-space);
-    padding: 20px;
-    border-top: 1px solid var(--neon-blue);
-    display: flex;
-    justify-content: center;
-    font-family: 'Segoe UI', Roboto, sans-serif;
+.hero img {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
 }
 
-.dev-container {
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 243, 255, 0.2);
-    padding: 15px 30px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    transition: 0.3s;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+.content {
+  padding: 20px;
+  text-align: center;
 }
 
-.dev-container:hover {
-    border-color: var(--neon-blue);
-    box-shadow: 0 0 25px rgba(0, 243, 255, 0.2);
-    transform: translateY(-5px);
+footer {
+  background: #1e293b;
+  text-align: center;
+  padding: 10px;
 }
 
-.dev-logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid var(--neon-blue);
-}
-
-.logo-fallback {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(45deg, #00f3ff, #005f73);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    border-radius: 10px;
-    font-size: 0.8rem;
-}
-
-.label {
-    font-size: 0.6rem;
-    color: var(--neon-blue);
-    letter-spacing: 2px;
-    display: block;
-}
-
-.dev-name {
-    color: #fff;
-    margin: 5px 0;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-.status-bar {
-    font-size: 0.7rem;
-    color: #888;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.pulse {
-    width: 8px;
-    height: 8px;
-    background: #00ff88;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #00ff88;
-    animation: blink 1.5s infinite;
-}
-
-@keyframes blink {
-    0% { opacity: 0.3; }
-    50% { opacity: 1; }
-    100% { opacity: 0.3; }
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
 }
