@@ -96,3 +96,95 @@ button:hover {
 .extra a:hover {
   text-decoration: underline;
 }
+:root {
+    --neon-blue: #00f3ff;
+    --deep-space: #0a0b10;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+.futuristic-footer {
+    background: var(--deep-space);
+    padding: 20px;
+    border-top: 1px solid var(--neon-blue);
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.dev-container {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    padding: 15px 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.dev-container:hover {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.dev-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--neon-blue);
+}
+
+.logo-fallback {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #00f3ff, #005f73);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.label {
+    font-size: 0.6rem;
+    color: var(--neon-blue);
+    letter-spacing: 2px;
+    display: block;
+}
+
+.dev-name {
+    color: #fff;
+    margin: 5px 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.status-bar {
+    font-size: 0.7rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pulse {
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff88;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
